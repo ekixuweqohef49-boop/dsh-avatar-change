@@ -1,0 +1,7 @@
+# 生成物：每个用户机器上的 node / server.mjs 绝对路径都不同，不入库
+cordis.patch.yml
+
+node_modules/
+*.log
+.DS_Store
+Thumbs.db

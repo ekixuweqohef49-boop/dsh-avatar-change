@@ -1,0 +1,45 @@
+{
+  "name": "dsh-avatar-change",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "把「看到用户发的图 → 直接换成 QQ 头像/昵称」打包成一个独立 DSH 插件：自带 MCP 工具，复用本机 surfcore 桥接，不把图片 base64 塞进模型上下文。",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./server": "./lib/server.mjs"
+  },
+  "files": [
+    "lib",
+    "install.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "smoke": "node test/smoke.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekixuweqohef49-boop/dsh-avatar-change.git"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "qq",
+    "avatar",
+    "mcp",
+    "plugin",
+    "surfcore"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": [
+        "./cordis.patch.yml"
+      ]
+    }
+  },
+  "license": "MIT"
+}
